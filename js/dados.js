@@ -3,364 +3,48 @@
    ============================================= */
 
 const produtos = [
-  {
-    id: 1,
-    nome: "Nike Air Max 270",
-    marca: "Nike",
-    categoria: "casual",
-    preco: 599.90,
-    desconto: 0,
-    tamanhos: [38, 39, 40, 41, 42, 43],
-    esgotados: [],
-    cor: "#B0C4DE",
-    corNome: "Azul Aço",
-    tag: "MAIS VENDIDO",
-    novo: false,
-    descricao: "O Nike Air Max 270 oferece o maior Air Max de calcanhar já criado para uso diário, inspirado em ícones Air Max do passado. Design atraente com amortecimento excepcional para o dia a dia.",
-    especificacoes: { solado: "Borracha", cabedal: "Mesh Engenheirado", forro: "Tecido sintético", palmilha: "EVA removível" }
-  },
-  {
-    id: 2,
-    nome: "Adidas Ultraboost 22",
-    marca: "Adidas",
-    categoria: "corrida",
-    preco: 749.90,
-    desconto: 10,
-    tamanhos: [38, 39, 40, 41, 42, 43, 44],
-    esgotados: [41],
-    cor: "#1A1A2E",
-    corNome: "Preto Noite",
-    tag: "OFERTA",
-    novo: false,
-    descricao: "O Ultraboost 22 tem tudo que você precisa para correr. Tecnologia BOOST™ para retorno de energia incrível e cabedal Primeknit+ que se adapta ao seu pé.",
-    especificacoes: { solado: "Continental™ Rubber", cabedal: "Primeknit+", forro: "Lycra", palmilha: "BOOST™" }
-  },
-  {
-    id: 3,
-    nome: "New Balance 574",
-    marca: "New Balance",
-    categoria: "casual",
-    preco: 479.90,
-    desconto: 0,
-    tamanhos: [37, 38, 39, 40, 41, 42, 43],
-    esgotados: [],
-    cor: "#6B8E6B",
-    corNome: "Verde Militar",
-    tag: "CLÁSSICO",
-    novo: false,
-    descricao: "O 574 é um clássico que nunca sai de moda. Design icônico com tecnologia ENCAP que oferece suporte e amortecimento duradouros.",
-    especificacoes: { solado: "Borracha", cabedal: "Camurça/Mesh", forro: "Tecido", palmilha: "ENCAP" }
-  },
-  {
-    id: 4,
-    nome: "Puma RS-X3",
-    marca: "Puma",
-    categoria: "casual",
-    preco: 419.90,
-    desconto: 15,
-    tamanhos: [38, 39, 40, 41, 42, 43, 44],
-    esgotados: [38],
-    cor: "#FF6B6B",
-    corNome: "Vermelho Coral",
-    tag: "OFERTA",
-    novo: true,
-    descricao: "O RS-X3 reinventa o sistema RS Running da PUMA com uma silhueta volumosa e designs ousados. Perfeito para quem quer se destacar.",
-    especificacoes: { solado: "Borracha RS", cabedal: "Mesh/Sintético", forro: "Tecido", palmilha: "RS Foam" }
-  },
-  {
-    id: 5,
-    nome: "Fila Disruptor II",
-    marca: "Fila",
-    categoria: "casual",
-    preco: 359.90,
-    desconto: 0,
-    tamanhos: [37, 38, 39, 40, 41, 42],
-    esgotados: [],
-    cor: "#F5F5F5",
-    corNome: "Branco",
-    tag: "TENDÊNCIA",
-    novo: false,
-    descricao: "O Disruptor II é o tênis chunky mais icônico de todos os tempos. Visual bold que domina qualquer look urbano ou esportivo.",
-    especificacoes: { solado: "EVA serrilhado", cabedal: "Couro sintético", forro: "Tecido", palmilha: "EVA" }
-  },
-  {
-    id: 6,
-    nome: "Vans Old Skool",
-    marca: "Vans",
-    categoria: "casual",
-    preco: 329.90,
-    desconto: 0,
-    tamanhos: [37, 38, 39, 40, 41, 42, 43, 44],
-    esgotados: [],
-    cor: "#1C1C1C",
-    corNome: "Preto/Branco",
-    tag: "CLÁSSICO",
-    novo: false,
-    descricao: "O Old Skool é o tênis de skate mais icônico da Vans. Com a famosa faixa lateral Jazz Stripe e cabedal de suede e canvas duráveis.",
-    especificacoes: { solado: "Borracha Waffle", cabedal: "Suede/Canvas", forro: "Tecido", palmilha: "Ortholite®" }
-  },
-  {
-    id: 7,
-    nome: "ASICS Gel-Nimbus 25",
-    marca: "ASICS",
-    categoria: "corrida",
-    preco: 849.90,
-    desconto: 0,
-    tamanhos: [38, 39, 40, 41, 42, 43, 44],
-    esgotados: [44],
-    cor: "#4A90D9",
-    corNome: "Azul Royal",
-    tag: "PREMIUM",
-    novo: true,
-    descricao: "O Gel-Nimbus 25 oferece o máximo em amortecimento e conforto para corredores de longa distância. Tecnologia FF BLAST+ ECO para resposta energética sustentável.",
-    especificacoes: { solado: "AHARPLUS™", cabedal: "Engineered Mesh", forro: "Tecido reciclado", palmilha: "FF BLAST+™ ECO" }
-  },
-  {
-    id: 8,
-    nome: "Mizuno Wave Rider 26",
-    marca: "Mizuno",
-    categoria: "corrida",
-    preco: 699.90,
-    desconto: 5,
-    tamanhos: [38, 39, 40, 41, 42, 43],
-    esgotados: [],
-    cor: "#2ECC71",
-    corNome: "Verde Neon",
-    tag: "MAIS VENDIDO",
-    novo: false,
-    descricao: "O Wave Rider 26 combina a lendária tecnologia Wave com materiais sustentáveis. Ideal para treinos diários com máximo conforto e durabilidade.",
-    especificacoes: { solado: "X10", cabedal: "Waveknit™", forro: "Coolmax®", palmilha: "U4ic™" }
-  },
-  {
-    id: 9,
-    nome: "Nike Air Force 1 '07",
-    marca: "Nike",
-    categoria: "casual",
-    preco: 549.90,
-    desconto: 0,
-    tamanhos: [37, 38, 39, 40, 41, 42, 43, 44],
-    esgotados: [],
-    cor: "#FFFFFF",
-    corNome: "Branco",
-    tag: "ÍCONE",
-    novo: false,
-    descricao: "O Air Force 1 '07 é o lendário tênis de basquete que se tornou um ícone da cultura sneaker. Design limpo e intemporal que combina com tudo.",
-    especificacoes: { solado: "Borracha", cabedal: "Couro", forro: "Espuma", palmilha: "Air-Sole" }
-  },
-  {
-    id: 10,
-    nome: "Adidas Stan Smith",
-    marca: "Adidas",
-    categoria: "casual",
-    preco: 449.90,
-    desconto: 0,
-    tamanhos: [37, 38, 39, 40, 41, 42, 43],
-    esgotados: [42],
-    cor: "#E8F5E9",
-    corNome: "Branco/Verde",
-    tag: "CLÁSSICO",
-    novo: false,
-    descricao: "O Stan Smith é um dos tênis mais icônicos da história. Design minimalista em couro branco com detalhes verdes que nunca sai de moda.",
-    especificacoes: { solado: "Borracha", cabedal: "Couro natural", forro: "Tecido", palmilha: "OrthoLite®" }
-  },
-  {
-    id: 11,
-    nome: "New Balance Fresh Foam X 1080v12",
-    marca: "New Balance",
-    categoria: "corrida",
-    preco: 899.90,
-    desconto: 0,
-    tamanhos: [38, 39, 40, 41, 42, 43, 44],
-    esgotados: [],
-    cor: "#7B68EE",
-    corNome: "Roxo",
-    tag: "NOVO",
-    novo: true,
-    descricao: "O 1080v12 conta com a espuma Fresh Foam X mais macia já criada pela New Balance. Amortecimento plush para corredores que priorizam conforto.",
-    especificacoes: { solado: "Blown Rubber", cabedal: "Hypoknit™", forro: "Ultra Heel", palmilha: "Fresh Foam X™" }
-  },
-  {
-    id: 12,
-    nome: "Puma Suede Classic XXI",
-    marca: "Puma",
-    categoria: "casual",
-    preco: 349.90,
-    desconto: 10,
-    tamanhos: [37, 38, 39, 40, 41, 42, 43],
-    esgotados: [],
-    cor: "#8B4513",
-    corNome: "Marrom Suede",
-    tag: "OFERTA",
-    novo: false,
-    descricao: "O Suede Classic XXI é um ícone de mais de 50 anos. Cabedal de camurça premium e solado de borracha, um clássico que atravessa gerações.",
-    especificacoes: { solado: "Borracha", cabedal: "Camurça", forro: "Tecido", palmilha: "EVA" }
-  },
-  {
-    id: 13,
-    nome: "Nike React Infinity Run FK 3",
-    marca: "Nike",
-    categoria: "corrida",
-    preco: 679.90,
-    desconto: 0,
-    tamanhos: [38, 39, 40, 41, 42, 43, 44],
-    esgotados: [39],
-    cor: "#FF4D00",
-    corNome: "Laranja",
-    tag: "NOVO",
-    novo: true,
-    descricao: "Criado para ajudar a reduzir lesões, o React Infinity Run FK 3 tem espuma React macia e rocker geometry para uma passada natural e eficiente.",
-    especificacoes: { solado: "Borracha", cabedal: "Flyknit", forro: "Espuma", palmilha: "React foam" }
-  },
-  {
-    id: 14,
-    nome: "Vans Authentic",
-    marca: "Vans",
-    categoria: "casual",
-    preco: 279.90,
-    desconto: 0,
-    tamanhos: [37, 38, 39, 40, 41, 42, 43],
-    esgotados: [],
-    cor: "#DC143C",
-    corNome: "Vermelho",
-    tag: "BÁSICO",
-    novo: false,
-    descricao: "O Authentic foi o primeiro tênis da Vans, lançado em 1966. Lona, solado vulcanizado e tira de tela — simples, durável e eterno.",
-    especificacoes: { solado: "Borracha Waffle Vulc", cabedal: "Canvas", forro: "Tecido", palmilha: "Ortholite®" }
-  },
-  {
-    id: 15,
-    nome: "ASICS Gel-Kayano 29",
-    marca: "ASICS",
-    categoria: "corrida",
-    preco: 919.90,
-    desconto: 0,
-    tamanhos: [38, 39, 40, 41, 42, 43, 44],
-    esgotados: [],
-    cor: "#20B2AA",
-    corNome: "Teal",
-    tag: "PREMIUM",
-    novo: true,
-    descricao: "O Gel-Kayano 29 é o tênis de controle de movimento mais avançado da ASICS. Com tecnologia 4D GUIDANCE SYSTEM para suporte superior em longas distâncias.",
-    especificacoes: { solado: "AHARPLUS™", cabedal: "Jacquard Mesh", forro: "Tecido reciclado", palmilha: "GEL™ + FF BLAST™" }
-  },
-  {
-    id: 16,
-    nome: "Adidas Samba OG",
-    marca: "Adidas",
-    categoria: "casual",
-    preco: 529.90,
-    desconto: 0,
-    tamanhos: [37, 38, 39, 40, 41, 42, 43],
-    esgotados: [40],
-    cor: "#F5DEB3",
-    corNome: "Trigo/Marrom",
-    tag: "TENDÊNCIA",
-    novo: true,
-    descricao: "O Samba OG voltou com força total. Inspirado no futebol indoor dos anos 50, hoje é o queridinho da moda mundial com seu design inconfundível.",
-    especificacoes: { solado: "Borracha Gum", cabedal: "Couro premium", forro: "Tecido", palmilha: "OrthoLite®" }
-  },
-  {
-    id: 17,
-    nome: "Mizuno Wave Sky 6",
-    marca: "Mizuno",
-    categoria: "corrida",
-    preco: 779.90,
-    desconto: 8,
-    tamanhos: [38, 39, 40, 41, 42, 43, 44],
-    esgotados: [],
-    cor: "#9370DB",
-    corNome: "Roxo/Cinza",
-    tag: "OFERTA",
-    novo: false,
-    descricao: "O Wave Sky 6 oferece o máximo em amortecimento e cushioning. Ideal para treinos longos de quem prioriza conforto nos pés.",
-    especificacoes: { solado: "Blown Rubber", cabedal: "Waveknit™ S2", forro: "Coolmax®", palmilha: "U4icX™" }
-  },
-  {
-    id: 18,
-    nome: "Nike Dunk Low",
-    marca: "Nike",
-    categoria: "lançamentos",
-    preco: 649.90,
-    desconto: 0,
-    tamanhos: [37, 38, 39, 40, 41, 42, 43, 44],
-    esgotados: [37, 38],
-    cor: "#228B22",
-    corNome: "Verde/Branco",
-    tag: "LANÇAMENTO",
-    novo: true,
-    descricao: "O Dunk Low volta em colorway exclusivo. Design icônico do basquete universitário dos anos 80 com materiais premium e acabamento impecável.",
-    especificacoes: { solado: "Borracha", cabedal: "Couro", forro: "Espuma", palmilha: "Foam" }
-  },
-  {
-    id: 19,
-    nome: "New Balance 530",
-    marca: "New Balance",
-    categoria: "casual",
-    preco: 399.90,
-    desconto: 0,
-    tamanhos: [37, 38, 39, 40, 41, 42, 43],
-    esgotados: [],
-    cor: "#C0C0C0",
-    corNome: "Prata/Branco",
-    tag: "NOVO",
-    novo: true,
-    descricao: "O 530 é inspirado nos tênis de corrida técnica dos anos 90. Visual retro com tecnologia modern: cabedal em mesh com sobreposições em couro sintético.",
-    especificacoes: { solado: "Borracha", cabedal: "Mesh/Couro sintético", forro: "Tecido", palmilha: "ABZORB®" }
-  },
-  {
-    id: 20,
-    nome: "Fila Ray Tracer",
-    marca: "Fila",
-    categoria: "lançamentos",
-    preco: 389.90,
-    desconto: 12,
-    tamanhos: [38, 39, 40, 41, 42, 43],
-    esgotados: [],
-    cor: "#FFD700",
-    corNome: "Amarelo/Preto",
-    tag: "OFERTA",
-    novo: true,
-    descricao: "O Ray Tracer é a aposta da Fila nos sneakers volumosos de nova geração. Silhueta arrojada com amortecimento EVA ultra-leve e visual que chama atenção.",
-    especificacoes: { solado: "EVA/Borracha", cabedal: "Mesh/Sintético", forro: "Tecido", palmilha: "EVA" }
-  }
+  // ── MASCULINO ──
+  { id:1, nome:"Nike Air Max 270", marca:"Nike", categoria:"casual", genero:"masculino", preco:599.90, desconto:0, tamanhos:[38,39,40,41,42,43], esgotados:[], cor:"#1565C0", corNome:"Azul Royal", tag:"MAIS VENDIDO", novo:false, descricao:"O Nike Air Max 270 oferece o maior Air Max de calcanhar já criado para uso diário. Design atraente com amortecimento excepcional.", especificacoes:{solado:"Borracha",cabedal:"Mesh Engenheirado",forro:"Tecido sintético",palmilha:"EVA removível",drop:"10mm"} },
+  { id:2, nome:"Adidas Ultraboost 22", marca:"Adidas", categoria:"corrida", genero:"masculino", preco:749.90, desconto:10, tamanhos:[38,39,40,41,42,43,44], esgotados:[41], cor:"#0D0D0D", corNome:"Preto Noite", tag:"OFERTA", novo:false, descricao:"Tecnologia BOOST para retorno de energia incrível e cabedal Primeknit+ que se adapta ao seu pé.", especificacoes:{solado:"Continental™ Rubber",cabedal:"Primeknit+",forro:"Lycra",palmilha:"BOOST™",drop:"10mm"} },
+  { id:3, nome:"New Balance 574", marca:"New Balance", categoria:"casual", genero:"masculino", preco:479.90, desconto:0, tamanhos:[37,38,39,40,41,42,43], esgotados:[], cor:"#2E7D32", corNome:"Verde Militar", tag:"CLÁSSICO", novo:false, descricao:"Um ícone do streetwear mundial. O 574 combina estilo retrô com conforto moderno para o dia a dia.", especificacoes:{solado:"Borracha",cabedal:"Camurça/Mesh",forro:"Tecido",palmilha:"ENCAP",drop:"8mm"} },
+  { id:4, nome:"Nike Pegasus 42", marca:"Nike", categoria:"corrida", genero:"masculino", preco:689.90, desconto:5, tamanhos:[38,39,40,41,42,43,44], esgotados:[], cor:"#FF6F00", corNome:"Laranja Fogo", tag:"LANÇAMENTO", novo:true, descricao:"O Nike Pegasus 42 continua a herança de 40 anos da série com React + Air no calcanhar para corridas diárias.", especificacoes:{solado:"Borracha",cabedal:"Flyknit",forno:"Mesh respirável",palmilha:"React + Air",drop:"10mm"} },
+  { id:5, nome:"Adidas Samba OG", marca:"Adidas", categoria:"casual", genero:"masculino", preco:529.90, desconto:0, tamanhos:[38,39,40,41,42,43], esgotados:[], cor:"#F5F5F5", corNome:"Branco/Preto", tag:"TREND", novo:false, descricao:"O lendário Samba, nascido nas quadras de futsal nos anos 50, hoje é o tênis mais desejado do streetwear global.", especificacoes:{solado:"Borracha",cabedal:"Couro",forro:"Couro",palmilha:"OrthoLite",drop:"6mm"} },
+  { id:6, nome:"Puma RS-X³", marca:"Puma", categoria:"casual", genero:"masculino", preco:419.90, desconto:15, tamanhos:[38,39,40,41,42,43,44], esgotados:[43], cor:"#C62828", corNome:"Vermelho Sport", tag:"OFERTA", novo:false, descricao:"Design chunky com tecnologia RS correndo pelas solas. Bold, colorido e com amortecimento superior.", especificacoes:{solado:"Borracha RS",cabedal:"Mesh+Couro Sintético",forro:"Tecido",palmilha:"RS Foam",drop:"12mm"} },
+  { id:7, nome:"ASICS Gel-Kayano 31", marca:"ASICS", categoria:"corrida", genero:"masculino", preco:849.90, desconto:0, tamanhos:[38,39,40,41,42,43,44], esgotados:[], cor:"#4A148C", corNome:"Roxo Performance", tag:"PREMIUM", novo:false, descricao:"O Gel-Kayano 31 oferece suporte superior para pronadores com GEL duplo e plataforma FF Blast+ Eco.", especificacoes:{solado:"AHAR+",cabedal:"Engineered Mesh",forro:"ASICS SmoothBounce",palmilha:"FF Blast+ Eco",drop:"10mm"} },
+  { id:8, nome:"Mizuno Wave Prophecy 13", marca:"Mizuno", categoria:"corrida", genero:"masculino", preco:999.90, desconto:0, tamanhos:[38,39,40,41,42,43], esgotados:[], cor:"#006064", corNome:"Teal Premium", tag:"TOP DE LINHA", novo:true, descricao:"O pináculo da tecnologia Mizuno. Wave Plate em carbono proporciona retorno de energia e estabilidade inigualáveis.", especificacoes:{solado:"X10 Carbon Rubber",cabedal:"Premium Mesh",forro:"Premium Lycra",palmilha:"AP+ Midsole + Wave Plate",drop:"12mm"} },
+  { id:9, nome:"Vans Old Skool Pro", marca:"Vans", categoria:"casual", genero:"masculino", preco:369.90, desconto:0, tamanhos:[38,39,40,41,42,43,44], esgotados:[], cor:"#212121", corNome:"Preto/Branco", tag:"CLÁSSICO", novo:false, descricao:"A listinha lateral mais icônica do skate. O Old Skool Pro tem sola UltraCush para o máximo de impacto.", especificacoes:{solado:"Waffle",cabedal:"Canvas/Suede",forro:"Tecido",palmilha:"UltraCush",drop:"0mm"} },
+  { id:10, nome:"New Balance 1906R", marca:"New Balance", categoria:"casual", genero:"masculino", preco:699.90, desconto:8, tamanhos:[38,39,40,41,42,43], esgotados:[], cor:"#37474F", corNome:"Cinza Metálico", tag:"TREND", novo:true, descricao:"O 1906R revisita a era dourada do running dos anos 2000 com amortecimento ABZORB e visual retrô-futuro.", especificacoes:{solado:"ABZORB+FantomFit",cabedal:"Mesh Técnico",forro:"Mesh",palmilha:"ABZORB",drop:"8mm"} },
+  { id:11, nome:"Fila Disruptor II", marca:"Fila", categoria:"casual", genero:"masculino", preco:349.90, desconto:20, tamanhos:[38,39,40,41,42,43,44], esgotados:[], cor:"#FFFFFF", corNome:"Branco Total", tag:"OFERTA", novo:false, descricao:"O chunky mais clássico da Fila. Sola dentada, perfil bold e estilo 90s que nunca sai de moda.", especificacoes:{solado:"EVA Chunky",cabedal:"Couro Sintético",forno:"Tecido",palmilha:"Memory Foam",drop:"14mm"} },
+  { id:12, nome:"Nike Air Jordan 1 Retro", marca:"Nike", categoria:"casual", genero:"masculino", preco:1199.90, desconto:0, tamanhos:[38,39,40,41,42,43,44], esgotados:[42,43], cor:"#B71C1C", corNome:"Chicago Red", tag:"EXCLUSIVO", novo:false, descricao:"O original. A lenda. O Air Jordan 1 redefiniu o que um tênis de basquete podia ser — e ainda redefine.", especificacoes:{solado:"Borracha",cabedal:"Couro",forro:"Tecido",palmilha:"Air-Sole",drop:"14mm"} },
+
+  // ── FEMININO ──
+  { id:13, nome:"Nike Air Max Pulse", marca:"Nike", categoria:"casual", genero:"feminino", preco:649.90, desconto:0, tamanhos:[34,35,36,37,38,39], esgotados:[], cor:"#F06292", corNome:"Rosa Neon", tag:"LANÇAMENTO", novo:true, descricao:"O Air Max Pulse celebra a cultura musical com design inspirado na cena underground londrina. Vibrante e poderoso.", especificacoes:{solado:"Borracha",cabedal:"Mesh estruturado",forro:"Foam",palmilha:"Air Max",drop:"10mm"} },
+  { id:14, nome:"Adidas Stan Smith W", marca:"Adidas", categoria:"casual", genero:"feminino", preco:459.90, desconto:0, tamanhos:[34,35,36,37,38,39,40], esgotados:[], cor:"#FFFFFF", corNome:"Branco/Verde", tag:"CLÁSSICO", novo:false, descricao:"O tênis mais vendido da história do tênis. Elegante, limpo e versátil — combina com tudo.", especificacoes:{solado:"Borracha",cabedal:"Couro",forno:"Tecido",palmilha:"OrthoLite",drop:"6mm"} },
+  { id:15, nome:"New Balance 327 W", marca:"New Balance", categoria:"casual", genero:"feminino", preco:499.90, desconto:10, tamanhos:[34,35,36,37,38,39], esgotados:[36], cor:"#CE93D8", corNome:"Lilás Pastel", tag:"TREND", novo:true, descricao:"Silhueta retrô dos anos 70 com cores pastel que dominam o street style feminino atual.", especificacoes:{solado:"Borracha",cabedal:"Mesh+Camurça",forro:"Tecido",palmilha:"ENCAP",drop:"8mm"} },
+  { id:16, nome:"Nike Free Run 5.0 W", marca:"Nike", categoria:"corrida", genero:"feminino", preco:549.90, desconto:0, tamanhos:[34,35,36,37,38,39,40], esgotados:[], cor:"#80DEEA", corNome:"Aqua Fresh", tag:"CORRIDA", novo:false, descricao:"Movimento natural e liberdade. A sola flexível do Free Run simula a corrida descalça com proteção total.", especificacoes:{solado:"Flex Grooves",cabedal:"Flyknit",forno:"Mesh",palmilha:"Foam Midsole",drop:"4mm"} },
+  { id:17, nome:"Puma Mayze Leather W", marca:"Puma", categoria:"casual", genero:"feminino", preco:389.90, desconto:15, tamanhos:[34,35,36,37,38,39], esgotados:[], cor:"#FFCA28", corNome:"Amarelo Butter", tag:"OFERTA", novo:false, descricao:"Plataforma elevada com cabedal em couro premium. O Mayze é o queridinho do estilo feminino atual.", especificacoes:{solado:"Plataforma EVA",cabedal:"Couro",forno:"Tecido",palmilha:"SoftFoam+",drop:"16mm"} },
+  { id:18, nome:"ASICS Gel-Nimbus 25 W", marca:"ASICS", categoria:"corrida", genero:"feminino", preco:879.90, desconto:0, tamanhos:[34,35,36,37,38,39,40], esgotados:[], cor:"#E91E63", corNome:"Rosa Performance", tag:"PREMIUM", novo:false, descricao:"Amortecimento máximo para longas distâncias. O Gel-Nimbus 25 é o companheiro ideal para maratonistas.", especificacoes:{solado:"AHAR Outsole",cabedal:"Engineered Mesh",forno:"ASICS SmoothBounce",palmilha:"FF Blast+",drop:"13mm"} },
+  { id:19, nome:"Vans Slip-On W", marca:"Vans", categoria:"casual", genero:"feminino", preco:319.90, desconto:0, tamanhos:[34,35,36,37,38,39], esgotados:[], cor:"#FF8A65", corNome:"Pêssego", tag:"ESTILO", novo:false, descricao:"Fácil de calçar, impossível de tirar. O Slip-On é o ícone de praticidade e estilo que atravessa gerações.", especificacoes:{solado:"Waffle",cabedal:"Canvas",forro:"Tecido",palmilha:"Insole Confortável",drop:"0mm"} },
+  { id:20, nome:"Nike Cortez W", marca:"Nike", categoria:"casual", genero:"feminino", preco:429.90, desconto:5, tamanhos:[34,35,36,37,38,39,40], esgotados:[], cor:"#B2DFDB", corNome:"Menta", tag:"TREND", novo:true, descricao:"De volta ao estilo dos anos 70. O Cortez é o retorno triunfal de um clássico Nike que domina o street style 2025.", especificacoes:{solado:"Borracha",cabedal:"Couro+Nylon",forno:"Tecido",palmilha:"EVA",drop:"8mm"} },
+  { id:21, nome:"Adidas Gazelle W", marca:"Adidas", categoria:"casual", genero:"feminino", preco:479.90, desconto:0, tamanhos:[34,35,36,37,38,39], esgotados:[], cor:"#7B1FA2", corNome:"Roxo Vintage", tag:"CLÁSSICO", novo:false, descricao:"Nascido nas quadras de esporte nos anos 60, o Gazelle é hoje sinônimo de estilo feminino atemporal.", especificacoes:{solado:"Borracha",cabedal:"Camurça",forno:"Couro",palmilha:"OrthoLite",drop:"6mm"} },
+  { id:22, nome:"Mizuno Wave Skyrise 4 W", marca:"Mizuno", categoria:"corrida", genero:"feminino", preco:699.90, desconto:12, tamanhos:[34,35,36,37,38,39,40], esgotados:[37], cor:"#F48FB1", corNome:"Rosa Coral", tag:"CORRIDA", novo:true, descricao:"Leveza e responsividade para treinos diários. O Wave Skyrise entrega velocidade com estabilidade Mizuno.", especificacoes:{solado:"X10",cabedal:"Waveknit",forno:"Lycra",palmilha:"Enerzy Lite",drop:"10mm"} },
+
+  // ── INFANTIL ──
+  { id:23, nome:"Nike Downshifter 12 Kids", marca:"Nike", categoria:"corrida", genero:"infantil", preco:249.90, desconto:0, tamanhos:[28,29,30,31,32,33,34], esgotados:[], cor:"#42A5F5", corNome:"Azul Kids", tag:"INFANTIL", novo:false, descricao:"Leve, durável e fácil de calçar. O Downshifter 12 Kids foi feito para aguentar a energia das crianças.", especificacoes:{solado:"Borracha",cabedal:"Mesh",forno:"Sintético",palmilha:"EVA",drop:"10mm"} },
+  { id:24, nome:"Adidas Tensaur Run Kids", marca:"Adidas", categoria:"corrida", genero:"infantil", preco:219.90, desconto:10, tamanhos:[28,29,30,31,32,33,34,35], esgotados:[], cor:"#66BB6A", corNome:"Verde Neon Kids", tag:"OFERTA", novo:false, descricao:"Sistema de fechamento fácil para pequenos aventureiros. Respirável e com estabilidade para corridas e brincadeiras.", especificacoes:{solado:"Borracha",cabedal:"Mesh",forno:"Sintético",palmilha:"Cloudfoam",drop:"10mm"} },
+  { id:25, nome:"New Balance 680 Kids", marca:"New Balance", categoria:"corrida", genero:"infantil", preco:269.90, desconto:0, tamanhos:[28,29,30,31,32,33,34], esgotados:[], cor:"#FF7043", corNome:"Laranja Kids", tag:"INFANTIL", novo:true, descricao:"O 680 Kids tem bico reforçado e sola de borracha resistente para aguentar todo o desgaste do cotidiano infantil.", especificacoes:{solado:"NDurance Rubber",cabedal:"Mesh",forno:"Mesh",palmilha:"Foam",drop:"10mm"} },
+  { id:26, nome:"Puma Anzarun Kids", marca:"Puma", categoria:"casual", genero:"infantil", preco:189.90, desconto:15, tamanhos:[28,29,30,31,32,33,34,35], esgotados:[], cor:"#AB47BC", corNome:"Roxo Kids", tag:"OFERTA", novo:false, descricao:"Design moderno com velcro prático para que as crianças possam calçar e descalçar com independência.", especificacoes:{solado:"Borracha",cabedal:"Mesh",forno:"Tecido",palmilha:"SoftFoam",drop:"8mm"} },
+  { id:27, nome:"Vans Old Skool Kids", marca:"Vans", categoria:"casual", genero:"infantil", preco:279.90, desconto:0, tamanhos:[28,29,30,31,32,33,34], esgotados:[], cor:"#37474F", corNome:"Preto/Branco Kids", tag:"CLÁSSICO", novo:false, descricao:"O clássico listinha lateral agora nos pezinhos dos pequenos. O Old Skool Kids é estilo desde cedo.", especificacoes:{solado:"Waffle",cabedal:"Canvas/Suede",forno:"Tecido",palmilha:"Confortável",drop:"0mm"} },
+  { id:28, nome:"Nike Revolution 7 Kids", marca:"Nike", categoria:"corrida", genero:"infantil", preco:229.90, desconto:20, tamanhos:[28,29,30,31,32,33,34,35], esgotados:[], cor:"#EF5350", corNome:"Vermelho Kids", tag:"OFERTA", novo:false, descricao:"Leve e colorido. O Revolution 7 Kids combina conforto diário com visual esportivo que as crianças amam.", especificacoes:{solado:"Borracha",cabedal:"Mesh",forno:"Sintético",palmilha:"Foam",drop:"10mm"} },
+  { id:29, nome:"Adidas Fortarun Kids", marca:"Adidas", categoria:"corrida", genero:"infantil", preco:199.90, desconto:0, tamanhos:[28,29,30,31,32,33,34], esgotados:[], cor:"#29B6F6", corNome:"Azul Céu Kids", tag:"INFANTIL", novo:true, descricao:"Cloudfoam macio e elástico na lingueta para calçar fácil. Feito para crianças que nunca ficam paradas.", especificacoes:{solado:"Sintético",cabedal:"Mesh",forno:"Mesh",palmilha:"Cloudfoam",drop:"10mm"} },
+  { id:30, nome:"ASICS Gel-Contend 8 Kids", marca:"ASICS", categoria:"corrida", genero:"infantil", preco:289.90, desconto:0, tamanhos:[28,29,30,31,32,33,34,35], esgotados:[], cor:"#26A69A", corNome:"Teal Kids", tag:"PREMIUM", novo:false, descricao:"GEL Technology da ASICS em versão kids. Amortecimento de verdade para os pequenos corredores do futuro.", especificacoes:{solado:"AHAR",cabedal:"Engineered Mesh",forno:"Tecido",palmilha:"GEL+EVA",drop:"10mm"} }
 ];
 
-// Helpers
-function getProduto(id) {
-  return produtos.find(p => p.id === parseInt(id));
-}
+const marcas = ["Nike","Adidas","New Balance","Puma","Fila","Vans","ASICS","Mizuno"];
+const tamanhosList = [37,38,39,40,41,42,43,44];
 
-function getPorCategoria(cat) {
-  return produtos.filter(p => p.categoria === cat);
-}
-
-function getPorMarca(marca) {
-  return produtos.filter(p => p.marca.toLowerCase() === marca.toLowerCase());
-}
-
-function getNovidades() {
-  return produtos.filter(p => p.novo);
-}
-
-function getMaisVendidos() {
-  return produtos.filter(p => p.tag === "MAIS VENDIDO" || p.tag === "CLÁSSICO" || p.tag === "ÍCONE");
-}
-
-function calcularPrecoFinal(produto) {
-  if (produto.desconto > 0) {
-    return produto.preco * (1 - produto.desconto / 100);
-  }
-  return produto.preco;
-}
-
-function calcularPrecoPix(produto) {
-  return calcularPrecoFinal(produto) * 0.9;
-}
-
-function formatarPreco(valor) {
-  return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
-}
-
-const marcas = ["Nike", "Adidas", "New Balance", "Puma", "Fila", "Vans", "ASICS", "Mizuno"];
-const categorias = ["casual", "corrida", "lançamentos"];
-const tamanhosList = [37, 38, 39, 40, 41, 42, 43, 44];
+function getProduto(id) { return produtos.find(p => p.id === id); }
+function getNovidades() { return produtos.filter(p => p.novo); }
+function calcularPrecoFinal(p) { return p.desconto > 0 ? p.preco * (1 - p.desconto/100) : p.preco; }
+function calcularPrecoPix(p) { return calcularPrecoFinal(p) * 0.9; }
+function formatarPreco(v) { return "R$ " + v.toFixed(2).replace(".", ",").replace(/\B(?=(\d{3})+(?!\d))/g, "."); }

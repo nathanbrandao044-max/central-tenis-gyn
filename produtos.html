@@ -15,26 +15,27 @@
   <header class="header scrolled" role="banner">
     <div class="container header-inner">
       <a href="index.html" class="logo" aria-label="Central do Tênis GYN">
-        <span class="logo-nome">Central do <span>Tênis</span></span>
-        <span class="logo-tag">GYN • Goiânia</span>
+        <span class="logo-nome">Central do <span>Tênis</span> GYN</span>
+        <span class="logo-tag">Goiânia • Desde 2018</span>
       </a>
-
       <nav class="nav-links" aria-label="Menu principal">
         <a href="index.html">Home</a>
-        <a href="produtos.html">Produtos</a>
+        <a href="produtos.html?genero=masculino">Masculino</a>
+        <a href="produtos.html?genero=feminino">Feminino</a>
+        <a href="produtos.html?genero=infantil">Infantil</a>
         <a href="produtos.html?categoria=corrida">Corrida</a>
-        <a href="produtos.html?categoria=casual">Casual</a>
-        <a href="produtos.html?categoria=lançamentos">Lançamentos</a>
+        <a href="produtos.html?categoria=lancamentos">Lançamentos</a>
       </nav>
-
       <div class="header-actions">
         <form class="search-form" role="search">
           <input type="search" placeholder="Buscar tênis, marcas..." aria-label="Buscar">
-          <button type="submit">Buscar</button>
+          <button type="submit">→</button>
         </form>
-        <button class="btn-busca" aria-label="Abrir busca">🔍</button>
+        <button class="btn-busca" aria-label="Abrir busca">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
         <a href="carrinho.html" class="btn-cart-header" aria-label="Ver carrinho">
-          🛒
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
           <span class="cart-badge" aria-live="polite">0</span>
         </a>
         <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
@@ -76,6 +77,13 @@
         <div class="filtro-grupo">
           <h3 class="filtro-grupo-titulo">Marca</h3>
           <div id="filtro-marcas" role="group" aria-label="Filtrar por marca">
+            <!-- Renderizado por JS -->
+          </div>
+        </div>
+
+        <div class="filtro-grupo">
+          <h3 class="filtro-grupo-titulo">Gênero</h3>
+          <div id="filtro-generos" role="group" aria-label="Filtrar por gênero">
             <!-- Renderizado por JS -->
           </div>
         </div>

@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Central do Tênis GYN — O seu tênis, no coração de Goiânia. Nike, Adidas, New Balance, Puma, Fila, Vans, ASICS e Mizuno.">
   <title>Central do Tênis GYN — O seu tênis, no coração de Goiânia</title>
-  <link rel="stylesheet" href="css/reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-page="home">
@@ -15,26 +18,27 @@
   <header class="header" role="banner">
     <div class="container header-inner">
       <a href="index.html" class="logo" aria-label="Central do Tênis GYN">
-        <span class="logo-nome">Central do <span>Tênis</span></span>
-        <span class="logo-tag">GYN • Goiânia</span>
+        <span class="logo-nome">Central do <span>Tênis</span> GYN</span>
+        <span class="logo-tag">Goiânia • Desde 2018</span>
       </a>
-
       <nav class="nav-links" aria-label="Menu principal">
-        <a href="index.html">Home</a>
-        <a href="produtos.html">Produtos</a>
+        <a href="index.html" class="nav-link-active">Home</a>
+        <a href="produtos.html">Masculino</a>
+        <a href="produtos.html">Feminino</a>
+        <a href="produtos.html">Infantil</a>
         <a href="produtos.html?categoria=corrida">Corrida</a>
-        <a href="produtos.html?categoria=casual">Casual</a>
-        <a href="produtos.html?categoria=lançamentos">Lançamentos</a>
+        <a href="produtos.html?categoria=lancamentos">Lançamentos</a>
       </nav>
-
       <div class="header-actions">
         <form class="search-form" role="search">
           <input type="search" placeholder="Buscar tênis, marcas..." aria-label="Buscar">
-          <button type="submit">Buscar</button>
+          <button type="submit">→</button>
         </form>
-        <button class="btn-busca" aria-label="Abrir busca">🔍</button>
+        <button class="btn-busca" aria-label="Abrir busca">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
         <a href="carrinho.html" class="btn-cart-header" aria-label="Ver carrinho">
-          🛒
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
           <span class="cart-badge" aria-live="polite">0</span>
         </a>
         <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
@@ -44,76 +48,187 @@
     </div>
   </header>
 
+  <!-- ====== TICKER ====== -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>FRETE GRÁTIS ACIMA DE R$ 499</span><span class="ticker-sep">✦</span>
+      <span>ATÉ 40% OFF NOS LANÇAMENTOS</span><span class="ticker-sep">✦</span>
+      <span>12X SEM JUROS NO CARTÃO</span><span class="ticker-sep">✦</span>
+      <span>TROCA EM 7 DIAS SEM BUROCRACIA</span><span class="ticker-sep">✦</span>
+      <span>LOJA FÍSICA EM GOIÂNIA</span><span class="ticker-sep">✦</span>
+      <span>PIX COM 10% DE DESCONTO</span><span class="ticker-sep">✦</span>
+      <span>FRETE GRÁTIS ACIMA DE R$ 499</span><span class="ticker-sep">✦</span>
+      <span>ATÉ 40% OFF NOS LANÇAMENTOS</span><span class="ticker-sep">✦</span>
+      <span>12X SEM JUROS NO CARTÃO</span><span class="ticker-sep">✦</span>
+      <span>TROCA EM 7 DIAS SEM BUROCRACIA</span><span class="ticker-sep">✦</span>
+      <span>LOJA FÍSICA EM GOIÂNIA</span><span class="ticker-sep">✦</span>
+      <span>PIX COM 10% DE DESCONTO</span><span class="ticker-sep">✦</span>
+    </div>
+  </div>
+
   <!-- ====== HERO ====== -->
-  <section class="hero" aria-label="Destaque">
+  <section class="hero" aria-label="Banner principal">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
     <div class="container hero-inner">
       <div class="hero-content animate">
-        <p class="hero-eyebrow">Nova coleção 2026</p>
-        <h1 class="hero-titulo">O par<br>certo<br><span>está aqui</span></h1>
-        <p class="hero-subtitulo">As melhores marcas do mundo, com o atendimento acolhedor de Goiânia. Entrega para todo o Brasil.</p>
+        <p class="hero-eyebrow"><span class="eyebrow-dot"></span> Nova Coleção 2026</p>
+        <h1 class="hero-titulo">
+          <span class="hero-title-outline">O PAR</span>
+          <span class="hero-title-solid">PERFEITO</span>
+          <span class="hero-title-orange">EXISTE.</span>
+        </h1>
+        <p class="hero-subtitulo">Nike, Adidas, New Balance e muito mais. Masculino, Feminino e Infantil. Entrega para todo o Brasil.</p>
         <div class="hero-ctas">
-          <a href="produtos.html" class="btn-hero-primary">Ver coleção</a>
-          <a href="produtos.html?categoria=lançamentos" class="btn-hero-outline">Lançamentos</a>
+          <a href="produtos.html" class="btn-hero-primary">
+            <span>VER COLEÇÃO</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="produtos.html?categoria=lancamentos" class="btn-hero-ghost">LANÇAMENTOS</a>
         </div>
         <div class="hero-stats">
           <div class="stat"><span class="stat-num">8+</span><span class="stat-label">Marcas</span></div>
-          <div class="stat"><span class="stat-num">200+</span><span class="stat-label">Modelos</span></div>
-          <div class="stat"><span class="stat-num">4.9★</span><span class="stat-label">Avaliação</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><span class="stat-num">30+</span><span class="stat-label">Modelos</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><span class="stat-num">4.9</span><span class="stat-label">★ Avaliação</span></div>
         </div>
       </div>
-      <div class="hero-img" aria-hidden="true">
-        <div class="hero-placeholder"></div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-shoe-stage">
+          <div class="hero-shoe-glow"></div>
+          <div class="hero-shoe-circle">
+            <div class="hero-shoe-emoji">👟</div>
+          </div>
+          <div class="hero-floating-tags">
+            <div class="float-tag float-tag-1">Nike Air Max 270</div>
+            <div class="float-tag float-tag-2">R$ 599,90</div>
+            <div class="float-tag float-tag-3">⭐ 4.9</div>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>SCROLL</span>
+      <div class="hero-scroll-line"></div>
     </div>
   </section>
 
   <!-- ====== MARCAS ====== -->
   <div class="marcas-section" aria-label="Marcas disponíveis">
     <div class="marcas-track">
-      <span class="marca-item">Nike</span>
-      <span class="marca-item">Adidas</span>
-      <span class="marca-item">New Balance</span>
-      <span class="marca-item">Puma</span>
-      <span class="marca-item">Fila</span>
-      <span class="marca-item">Vans</span>
-      <span class="marca-item">ASICS</span>
-      <span class="marca-item">Mizuno</span>
-      <!-- duplicado para loop infinito -->
-      <span class="marca-item">Nike</span>
-      <span class="marca-item">Adidas</span>
-      <span class="marca-item">New Balance</span>
-      <span class="marca-item">Puma</span>
-      <span class="marca-item">Fila</span>
-      <span class="marca-item">Vans</span>
-      <span class="marca-item">ASICS</span>
-      <span class="marca-item">Mizuno</span>
+      <span class="marca-item">NIKE</span><span class="marca-sep">◆</span>
+      <span class="marca-item">ADIDAS</span><span class="marca-sep">◆</span>
+      <span class="marca-item">NEW BALANCE</span><span class="marca-sep">◆</span>
+      <span class="marca-item">PUMA</span><span class="marca-sep">◆</span>
+      <span class="marca-item">FILA</span><span class="marca-sep">◆</span>
+      <span class="marca-item">VANS</span><span class="marca-sep">◆</span>
+      <span class="marca-item">ASICS</span><span class="marca-sep">◆</span>
+      <span class="marca-item">MIZUNO</span><span class="marca-sep">◆</span>
+      <span class="marca-item">NIKE</span><span class="marca-sep">◆</span>
+      <span class="marca-item">ADIDAS</span><span class="marca-sep">◆</span>
+      <span class="marca-item">NEW BALANCE</span><span class="marca-sep">◆</span>
+      <span class="marca-item">PUMA</span><span class="marca-sep">◆</span>
+      <span class="marca-item">FILA</span><span class="marca-sep">◆</span>
+      <span class="marca-item">VANS</span><span class="marca-sep">◆</span>
+      <span class="marca-item">ASICS</span><span class="marca-sep">◆</span>
+      <span class="marca-item">MIZUNO</span><span class="marca-sep">◆</span>
     </div>
   </div>
+
+  <!-- ====== COLEÇÕES POR GÊNERO ====== -->
+  <section class="section generos-section" aria-label="Coleções por gênero">
+    <div class="container">
+      <div class="section-header animate">
+        <div>
+          <span class="section-label">Encontre o seu</span>
+          <h2 class="section-titulo">Coleções</h2>
+        </div>
+      </div>
+      <div class="generos-grid">
+        <a href="produtos.html?genero=masculino" class="genero-card genero-masc animate">
+          <div class="genero-bg" aria-hidden="true"></div>
+          <div class="genero-shoe" aria-hidden="true">👟</div>
+          <div class="genero-content">
+            <p class="genero-label">Para ele</p>
+            <h3 class="genero-titulo">Masculino</h3>
+            <span class="genero-cta">Ver coleção →</span>
+          </div>
+        </a>
+        <a href="produtos.html?genero=feminino" class="genero-card genero-fem animate reveal-delay-1">
+          <div class="genero-bg" aria-hidden="true"></div>
+          <div class="genero-shoe" aria-hidden="true">👠</div>
+          <div class="genero-content">
+            <p class="genero-label">Para ela</p>
+            <h3 class="genero-titulo">Feminino</h3>
+            <span class="genero-cta">Ver coleção →</span>
+          </div>
+        </a>
+        <a href="produtos.html?genero=infantil" class="genero-card genero-kids animate reveal-delay-2">
+          <div class="genero-bg" aria-hidden="true"></div>
+          <div class="genero-shoe" aria-hidden="true">👟</div>
+          <div class="genero-content">
+            <p class="genero-label">Para os pequenos</p>
+            <h3 class="genero-titulo">Infantil</h3>
+            <span class="genero-cta">Ver coleção →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 
   <!-- ====== MAIS VENDIDOS ====== -->
   <section class="section" id="mais-vendidos" aria-label="Mais Vendidos">
     <div class="container">
       <div class="section-header animate">
         <div>
-          <span class="section-label">Destaques</span>
+          <span class="section-label">Os queridinhos</span>
           <h2 class="section-titulo">Mais Vendidos</h2>
         </div>
         <a href="produtos.html" class="link-ver-todos">Ver todos →</a>
       </div>
-      <div class="grid-4" id="grid-mais-vendidos" role="list" aria-label="Produtos mais vendidos">
-        <!-- Renderizado por JS -->
+      <div class="grid-4" id="grid-mais-vendidos" role="list"></div>
+    </div>
+  </section>
+
+  <!-- ====== DESTAQUE PRODUTO ====== -->
+  <section class="destaque-section" aria-label="Produto em destaque">
+    <div class="container">
+      <div class="destaque-inner animate">
+        <div class="destaque-texto">
+          <p class="destaque-eyebrow">Drop da Semana</p>
+          <h2 class="destaque-titulo">Adidas<br>Ultraboost 22</h2>
+          <p class="destaque-desc">Tecnologia BOOST para retorno de energia incrível. O tênis de corrida mais avançado da Adidas — agora com 10% OFF.</p>
+          <div class="destaque-preco">
+            <span class="destaque-preco-old">R$ 749,90</span>
+            <span class="destaque-preco-atual">R$ 674,91</span>
+          </div>
+          <a href="produto.html?id=2" class="btn-hero-primary">
+            <span>COMPRAR AGORA</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="destaque-img" aria-hidden="true">
+          <div class="destaque-shoe-glow"></div>
+          <div class="destaque-shoe">👟</div>
+          <div class="destaque-badge">-10% OFF</div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ====== BANNER OFERTA ====== -->
-  <div class="banner-oferta animate" role="complementary" aria-label="Oferta especial">
+  <div class="banner-oferta animate" role="complementary">
     <div class="container banner-oferta-inner">
       <div>
+        <p class="banner-eyebrow">Oferta Limitada</p>
         <h2 class="banner-titulo">Até 40% OFF<br>nos lançamentos</h2>
-        <p class="banner-sub">Só enquanto durar o estoque. Aproveite!</p>
+        <p class="banner-sub">Só enquanto durar o estoque. Não perca!</p>
       </div>
-      <a href="produtos.html?categoria=lançamentos" class="btn-banner">Aproveitar oferta</a>
+      <a href="produtos.html" class="btn-banner">
+        APROVEITAR AGORA
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
   </div>
 
@@ -127,53 +242,51 @@
         </div>
       </div>
       <div class="categorias-grid">
-        <div class="categoria-card animate" data-categoria="casual" role="button" tabindex="0" aria-label="Ver tênis masculinos">
+        <div class="categoria-card animate" data-categoria="casual" role="button" tabindex="0">
           <span class="categoria-icone">👟</span>
-          <p class="categoria-nome">Masculino</p>
-          <p class="categoria-qtd">Tamanhos 38–44</p>
-        </div>
-        <div class="categoria-card animate" data-categoria="casual" role="button" tabindex="0" aria-label="Ver tênis femininos">
-          <span class="categoria-icone">👠</span>
-          <p class="categoria-nome">Feminino</p>
-          <p class="categoria-qtd">Tamanhos 34–40</p>
-        </div>
-        <div class="categoria-card animate" data-categoria="corrida" role="button" tabindex="0" aria-label="Ver tênis de corrida">
-          <span class="categoria-icone">🏃</span>
-          <p class="categoria-nome">Corrida</p>
-          <p class="categoria-qtd">Performance + Treino</p>
-        </div>
-        <div class="categoria-card animate" data-categoria="casual" role="button" tabindex="0" aria-label="Ver tênis casuais">
-          <span class="categoria-icone">🎯</span>
           <p class="categoria-nome">Casual</p>
           <p class="categoria-qtd">Dia a dia</p>
         </div>
-        <div class="categoria-card animate" data-categoria="lançamentos" role="button" tabindex="0" aria-label="Ver lançamentos">
+        <div class="categoria-card animate" data-categoria="corrida" role="button" tabindex="0">
+          <span class="categoria-icone">🏃</span>
+          <p class="categoria-nome">Corrida</p>
+          <p class="categoria-qtd">Performance</p>
+        </div>
+        <div class="categoria-card animate" data-categoria="lancamentos" role="button" tabindex="0">
           <span class="categoria-icone">🚀</span>
           <p class="categoria-nome">Lançamentos</p>
           <p class="categoria-qtd">Novidades 2026</p>
+        </div>
+        <div class="categoria-card animate" data-genero="feminino" role="button" tabindex="0">
+          <span class="categoria-icone">👠</span>
+          <p class="categoria-nome">Feminino</p>
+          <p class="categoria-qtd">Tam. 34–40</p>
+        </div>
+        <div class="categoria-card animate" data-genero="infantil" role="button" tabindex="0">
+          <span class="categoria-icone">🎒</span>
+          <p class="categoria-nome">Infantil</p>
+          <p class="categoria-qtd">Tam. 28–35</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ====== NOVIDADES ====== -->
-  <section class="section" aria-label="Novidades" style="background: var(--cinza-claro);">
+  <section class="section novidades-section" aria-label="Novidades">
     <div class="container">
       <div class="section-header animate">
         <div>
           <span class="section-label">Acabou de chegar</span>
           <h2 class="section-titulo">Novidades</h2>
         </div>
-        <a href="produtos.html?ordem=novidades" class="link-ver-todos">Ver todas →</a>
+        <a href="produtos.html" class="link-ver-todos">Ver todas →</a>
       </div>
-      <div class="grid-3" id="grid-novidades" role="list" aria-label="Produtos novos">
-        <!-- Renderizado por JS -->
-      </div>
+      <div class="grid-3" id="grid-novidades" role="list"></div>
     </div>
   </section>
 
   <!-- ====== DEPOIMENTOS ====== -->
-  <section class="depoimentos-section" aria-label="Depoimentos de clientes">
+  <section class="depoimentos-section" aria-label="Depoimentos">
     <div class="container">
       <div class="section-header animate">
         <div>
@@ -183,54 +296,68 @@
       </div>
       <div class="depoimentos-grid">
         <article class="depoimento-card animate">
+          <div class="depoimento-quote">"</div>
           <div class="depoimento-estrelas">★★★★★</div>
-          <p class="depoimento-texto">"Comprei meu Nike Air Max e chegou em 2 dias! Qualidade impecável e atendimento muito atencioso. Com certeza vou comprar de novo."</p>
-          <p class="depoimento-autor">Mariana S.</p>
-          <p class="depoimento-cidade">Goiânia, GO</p>
+          <p class="depoimento-texto">Comprei meu Nike Air Max e chegou em 2 dias! Qualidade impecável e atendimento muito atencioso. Com certeza vou comprar de novo.</p>
+          <div class="depoimento-autor-row">
+            <div class="depoimento-avatar">M</div>
+            <div>
+              <p class="depoimento-autor">Mariana S.</p>
+              <p class="depoimento-cidade">Goiânia, GO</p>
+            </div>
+          </div>
         </article>
-        <article class="depoimento-card animate">
+        <article class="depoimento-card animate reveal-delay-1">
+          <div class="depoimento-quote">"</div>
           <div class="depoimento-estrelas">★★★★★</div>
-          <p class="depoimento-texto">"Minha loja de tênis favorita de Goiânia! Variedade incrível, preço justo e as trocas são super fáceis. Recomendo pra todo mundo!"</p>
-          <p class="depoimento-autor">Carlos E.</p>
-          <p class="depoimento-cidade">Aparecida de Goiânia, GO</p>
+          <p class="depoimento-texto">Minha loja de tênis favorita de Goiânia! Variedade incrível, preço justo e trocas super fáceis. Recomendo pra todo mundo!</p>
+          <div class="depoimento-autor-row">
+            <div class="depoimento-avatar">C</div>
+            <div>
+              <p class="depoimento-autor">Carlos E.</p>
+              <p class="depoimento-cidade">Aparecida de Goiânia, GO</p>
+            </div>
+          </div>
         </article>
-        <article class="depoimento-card animate">
+        <article class="depoimento-card animate reveal-delay-2">
+          <div class="depoimento-quote">"</div>
           <div class="depoimento-estrelas">★★★★★</div>
-          <p class="depoimento-texto">"Finalmente uma loja com tênis de corrida de verdade aqui em Goiás. O Gel-Kayano que comprei mudou meus treinos. Site fácil de usar!"</p>
-          <p class="depoimento-autor">Fernanda R.</p>
-          <p class="depoimento-cidade">Goiânia, GO</p>
+          <p class="depoimento-texto">Finalmente uma loja com tênis de corrida de verdade aqui em Goiás. O Gel-Kayano que comprei mudou meus treinos!</p>
+          <div class="depoimento-autor-row">
+            <div class="depoimento-avatar">F</div>
+            <div>
+              <p class="depoimento-autor">Fernanda R.</p>
+              <p class="depoimento-cidade">Goiânia, GO</p>
+            </div>
+          </div>
         </article>
       </div>
     </div>
   </section>
 
   <!-- ====== DIFERENCIAIS ====== -->
-  <section class="section" aria-label="Nossos diferenciais">
+  <section class="section diferenciais-section" aria-label="Nossos diferenciais">
     <div class="container">
-      <div class="section-header animate" style="justify-content:center; text-align:center; display:block; margin-bottom:var(--gap-2xl)">
-        <span class="section-label">Por que escolher a gente</span>
-        <h2 class="section-titulo">Nossos diferenciais</h2>
-      </div>
       <div class="diferenciais-grid">
         <div class="diferencial-item animate">
-          <span class="diferencial-icone">🚚</span>
+          <div class="diferencial-icon-wrap"><span class="diferencial-icone">🚚</span></div>
           <h3 class="diferencial-titulo">Entrega Brasil</h3>
-          <p class="diferencial-desc">Enviamos para todos os estados. Frete rastreado e entrega rápida.</p>
+          <p class="diferencial-desc">Enviamos para todos os estados. Frete rastreado e rápido.</p>
         </div>
-        <div class="diferencial-item animate">
-          <span class="diferencial-icone">📍</span>
+        <div class="diferencial-item animate reveal-delay-1">
+          <div class="diferencial-icon-wrap"><span class="diferencial-icone">📍</span></div>
           <h3 class="diferencial-titulo">Loja Física GYN</h3>
-          <p class="diferencial-desc">Visite nossa loja no coração de Goiânia e experimente antes de comprar.</p>
+          <p class="diferencial-desc">Visite nossa loja no coração de Goiânia e experimente.</p>
         </div>
-        <div class="diferencial-item animate">
-          <span class="diferencial-icone">💳</span>
+        <div class="diferencial-item animate reveal-delay-2">
+          <div class="diferencial-icon-wrap"><span class="diferencial-icone">💳</span></div>
           <h3 class="diferencial-titulo">12x sem juros</h3>
-          <p class="diferencial-desc">Parcele em até 12x no cartão sem acréscimo. Ou -10% no Pix.</p>
+          <p class="diferencial-desc">Parcele em até 12x no cartão. Ou -10% no Pix.</p>
         </div>
-        <div class="diferencial-item animate">
-          <span class="diferencial-icone">🔄</span>
+        <div class="diferencial-item animate reveal-delay-3">
+          <div class="diferencial-icon-wrap"><span class="diferencial-icone">🔄</span></div>
           <h3 class="diferencial-titulo">Troca em 7 dias</h3>
-          <p class="diferencial-desc">Não gostou? Troque sem burocracia em até 7 dias corridos.</p>
+          <p class="diferencial-desc">Não gostou? Troque sem burocracia em 7 dias corridos.</p>
         </div>
       </div>
     </div>
@@ -242,33 +369,29 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="logo" aria-label="Central do Tênis GYN">
-            <span class="logo-nome">Central do <span>Tênis</span></span>
-            <span class="logo-tag">GYN • Goiânia</span>
+            <span class="logo-nome">Central do <span>Tênis</span> GYN</span>
+            <span class="logo-tag">Goiânia • Desde 2018</span>
           </a>
-          <p class="footer-desc" style="margin-top:1rem">O seu tênis, no coração de Goiânia. As melhores marcas com o melhor atendimento de Goiás.</p>
-          <div class="footer-social" style="margin-top:1.5rem">
+          <p class="footer-desc">O seu tênis, no coração de Goiânia. As melhores marcas com o melhor atendimento de Goiás.</p>
+          <div class="footer-social">
             <a href="#" class="btn-social" aria-label="Instagram">📸</a>
             <a href="#" class="btn-social" aria-label="WhatsApp">💬</a>
-            <a href="#" class="btn-social" aria-label="Facebook">📘</a>
             <a href="#" class="btn-social" aria-label="TikTok">🎵</a>
           </div>
         </div>
-
         <div>
-          <h3 class="footer-title">Navegação</h3>
-          <nav class="footer-links" aria-label="Links do rodapé">
-            <a href="index.html">Home</a>
-            <a href="produtos.html">Todos os produtos</a>
+          <h3 class="footer-title">Coleções</h3>
+          <nav class="footer-links">
+            <a href="produtos.html?genero=masculino">Masculino</a>
+            <a href="produtos.html?genero=feminino">Feminino</a>
+            <a href="produtos.html?genero=infantil">Infantil</a>
             <a href="produtos.html?categoria=corrida">Corrida</a>
             <a href="produtos.html?categoria=casual">Casual</a>
-            <a href="produtos.html?categoria=lançamentos">Lançamentos</a>
-            <a href="carrinho.html">Carrinho</a>
           </nav>
         </div>
-
         <div>
           <h3 class="footer-title">Marcas</h3>
-          <nav class="footer-links" aria-label="Marcas disponíveis">
+          <nav class="footer-links">
             <a href="produtos.html?marca=Nike">Nike</a>
             <a href="produtos.html?marca=Adidas">Adidas</a>
             <a href="produtos.html?marca=New Balance">New Balance</a>
@@ -277,28 +400,32 @@
             <a href="produtos.html?marca=ASICS">ASICS</a>
           </nav>
         </div>
-
         <div class="footer-contato">
           <h3 class="footer-title">Contato</h3>
           <p>📞 (62) 99999-9999</p>
           <p>📧 contato@centraldotenisgyn.com</p>
-          <p>📍 Goiânia, Goiás — Brasil</p>
-          <p style="margin-top:0.5rem">📸 @centraldotenisgyn</p>
-          <p style="margin-top:0.5rem; font-size:0.8rem; color:rgba(255,255,255,0.4)">Seg–Sex: 9h–18h | Sáb: 9h–13h</p>
+          <p>📍 Goiânia, Goiás</p>
+          <p>📸 @centraldotenisgyn</p>
+          <p style="font-size:0.75rem;color:rgba(255,255,255,0.35);margin-top:0.5rem">Seg–Sex: 9h–18h | Sáb: 9h–13h</p>
         </div>
       </div>
-
       <div class="footer-bottom">
         <p class="footer-copy">© 2026 Central do Tênis GYN. Todos os direitos reservados.</p>
-        <div class="footer-pagamentos" aria-label="Formas de pagamento">
+        <div class="footer-pagamentos">
           <span class="pagamento-badge">PIX</span>
           <span class="pagamento-badge">VISA</span>
           <span class="pagamento-badge">MASTER</span>
           <span class="pagamento-badge">BOLETO</span>
+          <span class="pagamento-badge">AMEX</span>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/5562999999999" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <span>💬</span>
+  </a>
 
   <script src="js/dados.js"></script>
   <script src="js/carrinho.js"></script>
