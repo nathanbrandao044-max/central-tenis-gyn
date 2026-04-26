@@ -43,8 +43,43 @@ const produtos = [
 const marcas = ["Nike","Adidas","New Balance","Puma","Fila","Vans","ASICS","Mizuno"];
 const tamanhosList = [37,38,39,40,41,42,43,44];
 
+/* ── FOTOS (Unsplash CDN — fallback: picsum) ── */
+const fotosMap = {
+  1:  'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80',
+  2:  'https://images.unsplash.com/photo-1543508282-6319a3931d36?auto=format&fit=crop&w=500&q=80',
+  3:  'https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=500&q=80',
+  4:  'https://images.unsplash.com/photo-1608231387042-66d1773d3028?auto=format&fit=crop&w=500&q=80',
+  5:  'https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=500&q=80',
+  6:  'https://images.unsplash.com/photo-1600185365-d04d50f3d88f?auto=format&fit=crop&w=500&q=80',
+  7:  'https://images.unsplash.com/photo-1604163546180-4c3e86d1531b?auto=format&fit=crop&w=500&q=80',
+  8:  'https://images.unsplash.com/photo-1556906781-9d8929f83e0d?auto=format&fit=crop&w=500&q=80',
+  9:  'https://images.unsplash.com/photo-1552346989-23e0f0b8f7ad?auto=format&fit=crop&w=500&q=80',
+  10: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=500&q=80',
+  11: 'https://images.unsplash.com/photo-1500520198921-6d4704f98092?auto=format&fit=crop&w=500&q=80',
+  12: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80&sat=-10',
+  13: 'https://images.unsplash.com/photo-1582588678413-dbf45f4823e9?auto=format&fit=crop&w=500&q=80',
+  14: 'https://images.unsplash.com/photo-1460881680858-77c245833aca?auto=format&fit=crop&w=500&q=80',
+  15: 'https://images.unsplash.com/photo-1539289569612-6eb83f7e8a97?auto=format&fit=crop&w=500&q=80',
+  16: 'https://images.unsplash.com/photo-1515955656352-a1fa3fbe652e?auto=format&fit=crop&w=500&q=80',
+  17: 'https://images.unsplash.com/photo-1556906781-9d8929f83e0d?auto=format&fit=crop&w=500&q=80&hue=60',
+  18: 'https://images.unsplash.com/photo-1543508282-6319a3931d36?auto=format&fit=crop&w=500&q=80&hue=330',
+  19: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=500&q=80&hue=20',
+  20: 'https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=500&q=80&hue=140',
+  21: 'https://images.unsplash.com/photo-1552346989-23e0f0b8f7ad?auto=format&fit=crop&w=500&q=80&hue=270',
+  22: 'https://images.unsplash.com/photo-1582588678413-dbf45f4823e9?auto=format&fit=crop&w=500&q=80&hue=10',
+  23: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80&hue=200',
+  24: 'https://images.unsplash.com/photo-1543508282-6319a3931d36?auto=format&fit=crop&w=500&q=80&hue=100',
+  25: 'https://images.unsplash.com/photo-1608231387042-66d1773d3028?auto=format&fit=crop&w=500&q=80&hue=20',
+  26: 'https://images.unsplash.com/photo-1604163546180-4c3e86d1531b?auto=format&fit=crop&w=500&q=80&hue=300',
+  27: 'https://images.unsplash.com/photo-1552346989-23e0f0b8f7ad?auto=format&fit=crop&w=500&q=80&hue=0',
+  28: 'https://images.unsplash.com/photo-1600185365-d04d50f3d88f?auto=format&fit=crop&w=500&q=80&hue=0',
+  29: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=500&q=80&hue=200',
+  30: 'https://images.unsplash.com/photo-1556906781-9d8929f83e0d?auto=format&fit=crop&w=500&q=80&hue=150'
+};
+
 function getProduto(id) { return produtos.find(p => p.id === id); }
 function getNovidades() { return produtos.filter(p => p.novo); }
 function calcularPrecoFinal(p) { return p.desconto > 0 ? p.preco * (1 - p.desconto/100) : p.preco; }
 function calcularPrecoPix(p) { return calcularPrecoFinal(p) * 0.9; }
 function formatarPreco(v) { return "R$ " + v.toFixed(2).replace(".", ",").replace(/\B(?=(\d{3})+(?!\d))/g, "."); }
+function getFoto(id) { return fotosMap[id] || ('https://picsum.photos/seed/tenis' + id + '/500/400'); }
