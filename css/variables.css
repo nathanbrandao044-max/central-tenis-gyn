@@ -1,0 +1,111 @@
+/* ===========================
+   VARIÁVEIS CSS — Central do Tênis GYN
+   =========================== */
+
+:root {
+  /* ── Cores ── */
+  --preto:          #0A0A0A;
+  --laranja:        #FF4D00;
+  --laranja-escuro: #CC3D00;
+  --fundo:          #F2F2F2;
+  --branco:         #FFFFFF;
+  --cinza-claro:    #F5F5F5;
+  --cinza-medio:    #9E9E9E;
+  --cinza-escuro:   #424242;
+  --sucesso:        #00B37E;
+  --erro:           #EF4444;
+
+  /* aliases internos (usados no style.css) */
+  --color-orange:     var(--laranja);
+  --color-orange-dim: rgba(255, 77, 0, 0.15);
+  --color-orange-glow:rgba(255, 77, 0, 0.4);
+  --color-black:      var(--preto);
+  --color-bg:         var(--fundo);
+  --color-white:      var(--branco);
+  --color-gray-200:   #E0E0E0;
+  --color-gray-400:   var(--cinza-medio);
+  --color-gray-600:   #616161;
+  --color-gray-800:   #212121;
+
+  /* ── Tipografia ── */
+  --font-titulo: 'Bebas Neue', 'Impact', sans-serif;
+  --font-corpo:  'DM Sans', 'Segoe UI', sans-serif;
+  --font-title:  var(--font-titulo);
+  --font-body:   var(--font-corpo);
+
+  --fs-xs:   0.75rem;
+  --fs-sm:   0.875rem;
+  --fs-md:   1rem;
+  --fs-base: 1rem;
+  --fs-lg:   1.125rem;
+  --fs-xl:   1.25rem;
+  --fs-2xl:  1.5rem;
+  --fs-3xl:  2rem;
+  --fs-4xl:  2.5rem;
+  --fs-5xl:  3.5rem;
+  --fs-6xl:  5rem;
+
+  /* ── Espaçamentos / Gaps ── */
+  --gap-xs:  0.25rem;
+  --gap-sm:  0.5rem;
+  --gap-md:  0.75rem;
+  --gap-lg:  1rem;
+  --gap-xl:  1.5rem;
+  --gap-2xl: 2rem;
+  --gap-3xl: 3rem;
+  --gap-4xl: 4rem;
+
+  /* aliases space para compatibilidade */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* ── Bordas ── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-full: 9999px;
+
+  /* ── Sombras ── */
+  --shadow-sm:         0 1px 3px rgba(0,0,0,0.1);
+  --shadow-lg:         0 8px 24px rgba(0,0,0,0.2);
+  --shadow-laranja:    0 8px 32px rgba(255, 77, 0, 0.4);
+  --shadow-laranja-sm: 0 4px 16px rgba(255, 77, 0, 0.3);
+  --shadow-orange:     0 8px 32px rgba(255, 77, 0, 0.4);
+
+  /* ── Transições ── */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.4s ease;
+
+  /* ── Layout ── */
+  --header-h:      72px;
+  --header-height: 72px;
+  --container-max: 1280px;
+  --container-px:  1.5rem;
+  --container-pad: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --container-px:  2rem;
+    --container-pad: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --container-px:  3rem;
+    --container-pad: 3rem;
+  }
+}

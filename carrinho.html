@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Carrinho de compras — Central do Tênis GYN.">
+  <title>Carrinho — Central do Tênis GYN</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="carrinho">
+
+  <!-- ====== HEADER ====== -->
+  <header class="header scrolled" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Central do Tênis GYN">
+        <span class="logo-nome">Central do <span>Tênis</span></span>
+        <span class="logo-tag">GYN • Goiânia</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Menu principal">
+        <a href="index.html">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="produtos.html?categoria=corrida">Corrida</a>
+        <a href="produtos.html?categoria=casual">Casual</a>
+        <a href="produtos.html?categoria=lançamentos">Lançamentos</a>
+      </nav>
+
+      <div class="header-actions">
+        <form class="search-form" role="search">
+          <input type="search" placeholder="Buscar tênis, marcas..." aria-label="Buscar">
+          <button type="submit">Buscar</button>
+        </form>
+        <button class="btn-busca" aria-label="Abrir busca">🔍</button>
+        <a href="carrinho.html" class="btn-cart-header" aria-label="Ver carrinho">
+          🛒
+          <span class="cart-badge" aria-live="polite">0</span>
+        </a>
+        <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== CARRINHO ====== -->
+  <main class="container carrinho-page" role="main">
+    <h1 class="carrinho-titulo">Meu Carrinho</h1>
+
+    <!-- Estado vazio -->
+    <div class="carrinho-empty" id="carrinho-empty" aria-label="Carrinho vazio">
+      <span class="carrinho-empty-icone">🛒</span>
+      <h2>Seu carrinho está vazio</h2>
+      <p>Adicione produtos para continuar comprando.</p>
+      <a href="produtos.html">Ver produtos</a>
+    </div>
+
+    <!-- Carrinho com itens -->
+    <div class="carrinho-wrapper" id="carrinho-wrapper" aria-label="Itens no carrinho">
+
+      <div class="carrinho-tabela-wrap">
+        <table class="cart-table" role="table" aria-label="Produtos no carrinho">
+          <thead>
+            <tr>
+              <th scope="col">Produto</th>
+              <th scope="col">Qtd.</th>
+              <th scope="col">Total</th>
+              <th scope="col" aria-label="Remover"></th>
+            </tr>
+          </thead>
+          <tbody id="carrinho-tbody">
+            <!-- Renderizado por JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Resumo -->
+      <aside class="resumo-card" id="carrinho-resumo" aria-label="Resumo do pedido">
+        <h2 class="resumo-titulo">Resumo do Pedido</h2>
+
+        <div class="resumo-linha">
+          <span>Subtotal</span>
+          <span id="resumo-subtotal">R$ 0,00</span>
+        </div>
+        <div class="resumo-linha">
+          <span>Frete</span>
+          <span id="resumo-frete">Calcule abaixo</span>
+        </div>
+
+        <div class="frete-form">
+          <input type="text" id="input-cep" placeholder="00000-000" maxlength="9" aria-label="CEP para calcular frete">
+          <button type="button" id="btn-calcular-frete">Calcular</button>
+        </div>
+        <p class="frete-resultado" id="frete-resultado"></p>
+
+        <div class="resumo-linha total">
+          <span>Total</span>
+          <span id="resumo-total">R$ 0,00</span>
+        </div>
+
+        <a href="#" class="btn-finalizar" role="button" onclick="alert('Em desenvolvimento! Obrigado pela visita 😊'); return false;">
+          FINALIZAR COMPRA
+        </a>
+        <a href="produtos.html" class="btn-continuar">Continuar comprando</a>
+
+        <div style="margin-top:1.5rem; padding:1rem; background:var(--fundo); border-radius:var(--radius-sm); font-size:0.8rem; color:var(--cinza-medio); text-align:center;">
+          🔒 Compra segura e criptografada<br>
+          <span style="margin-top:0.25rem; display:inline-block">💳 Pix | Cartão | Boleto</span>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="Central do Tênis GYN">
+            <span class="logo-nome">Central do <span>Tênis</span></span>
+            <span class="logo-tag">GYN • Goiânia</span>
+          </a>
+          <p class="footer-desc" style="margin-top:1rem">O seu tênis, no coração de Goiânia.</p>
+        </div>
+        <div>
+          <h3 class="footer-title">Navegação</h3>
+          <nav class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="carrinho.html">Carrinho</a>
+          </nav>
+        </div>
+        <div>
+          <h3 class="footer-title">Marcas</h3>
+          <nav class="footer-links">
+            <a href="produtos.html?marca=Nike">Nike</a>
+            <a href="produtos.html?marca=Adidas">Adidas</a>
+            <a href="produtos.html?marca=New Balance">New Balance</a>
+          </nav>
+        </div>
+        <div class="footer-contato">
+          <h3 class="footer-title">Contato</h3>
+          <p>📞 (62) 99999-9999</p>
+          <p>📸 @centraldotenisgyn</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Central do Tênis GYN. Todos os direitos reservados.</p>
+        <div class="footer-pagamentos">
+          <span class="pagamento-badge">PIX</span>
+          <span class="pagamento-badge">VISA</span>
+          <span class="pagamento-badge">MASTER</span>
+          <span class="pagamento-badge">BOLETO</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/dados.js"></script>
+  <script src="js/carrinho.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
