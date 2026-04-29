@@ -43,25 +43,19 @@ const produtos = [
 const marcas = ["Nike","Adidas","New Balance","Puma","Fila","Vans","ASICS","Mizuno"];
 const tamanhosList = [37,38,39,40,41,42,43,44];
 
-/* ── FOTOS — Imagens locais ── */
+/* ── FOTOS — PNGs sem fundo ── */
 const _shoes = [
-  'img/tenis-vermelho.jpg',
-  'img/tenis-avif1.avif',
-  'img/tenis-branco.jpg',
-  'img/tenis-cinza-azul.jpg',
-  'img/tenis-rosa.jpg',
-  'img/tenis-branco2.jpg',
-  'img/tenis-preto.jpg',
-  'img/tenis-air-preto.jpg',
-  'img/tenis-preto-vermelho.jpg',
-  'img/tenis-roxo.jpg',
-  'img/tenis-cinza.jpg',
-  'img/tenis-avif2.avif',
-  'img/tenis-avif3.avif',
-  'img/tenis-avif4.avif',
-  'img/tenis-avif5.avif',
-  'img/tenis-avif6.avif',
-  'img/tenis-kids.jpg',
+  'img/tenis-vermelho.png',
+  'img/tenis-branco.png',
+  'img/tenis-cinza-azul.png',
+  'img/tenis-rosa.png',
+  'img/tenis-branco2.png',
+  'img/tenis-preto.png',
+  'img/tenis-air-preto.png',
+  'img/tenis-preto-vermelho.png',
+  'img/tenis-roxo.png',
+  'img/tenis-cinza.png',
+  'img/tenis-kids.png',
 ];
 
 function getProduto(id) { return produtos.find(p => p.id === id); }
