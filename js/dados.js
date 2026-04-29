@@ -43,16 +43,25 @@ const produtos = [
 const marcas = ["Nike","Adidas","New Balance","Puma","Fila","Vans","ASICS","Mizuno"];
 const tamanhosList = [37,38,39,40,41,42,43,44];
 
-/* ── FOTOS — Unsplash CDN (IDs confirmados de tênis reais) ── */
+/* ── FOTOS — Imagens locais ── */
 const _shoes = [
-  'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=82', // Nike Air Max red
-  'https://images.unsplash.com/photo-1543508282-6319a3931d36?auto=format&fit=crop&w=500&q=82', // Adidas running
-  'https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=500&q=82', // Nike white
-  'https://images.unsplash.com/photo-1600185365-d04d50f3d88f?auto=format&fit=crop&w=500&q=82', // Jordan high
-  'https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=500&q=82', // colorful sneaker
-  'https://images.unsplash.com/photo-1556906781-9d8929f83e0d?auto=format&fit=crop&w=500&q=82', // white low-top
-  'https://images.unsplash.com/photo-1552346989-23e0f0b8f7ad?auto=format&fit=crop&w=500&q=82', // dark canvas
-  'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=500&q=82', // grey/blue
+  'img/tenis-vermelho.jpg',
+  'img/tenis-avif1.avif',
+  'img/tenis-branco.jpg',
+  'img/tenis-cinza-azul.jpg',
+  'img/tenis-rosa.jpg',
+  'img/tenis-branco2.jpg',
+  'img/tenis-preto.jpg',
+  'img/tenis-air-preto.jpg',
+  'img/tenis-preto-vermelho.jpg',
+  'img/tenis-roxo.jpg',
+  'img/tenis-cinza.jpg',
+  'img/tenis-avif2.avif',
+  'img/tenis-avif3.avif',
+  'img/tenis-avif4.avif',
+  'img/tenis-avif5.avif',
+  'img/tenis-avif6.avif',
+  'img/tenis-kids.jpg',
 ];
 
 function getProduto(id) { return produtos.find(p => p.id === id); }
